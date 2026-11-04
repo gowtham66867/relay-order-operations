@@ -12,8 +12,8 @@ Status: **NOT READY TO SUBMIT** until the external evidence below is complete.
 
 ## Required evidence still missing
 
-1. Configure a real inference key in Relay's hosted environment and run an eligible Meta model successfully. Record the response ID, provider/model, source evidence, and resulting workflow. Credits were reported available by the owner, but the Billing UI remained on “Loading billing…” during inspection; the credit balance was not independently verified.
-2. Evaluate real model outputs against a labeled set. The current policy evaluation is deterministic demo parsing only.
+1. **Complete:** a dedicated Meta key is stored as a hosted secret. Muse Spark 1.3 returned real responses; see `live-smoke.json`. Free credits were confirmed and inference succeeded without adding a payment method.
+2. **Complete, limited scope:** six synthetic live-model scenarios passed; see `live-evaluation.json`. This is an integration evaluation, not a production accuracy estimate.
 3. Record and publish an accessible three-minute video. A script is available; a video URL is not.
 4. Public source created: https://github.com/gowtham66867/relay-order-operations (MIT license). Verify final checks after publication.
 5. Confirm judges can access the demo. The app is intentionally owner-private; do not assume a private URL gives judges access.

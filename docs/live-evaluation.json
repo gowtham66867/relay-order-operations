@@ -1,0 +1,195 @@
+{
+  "evaluatedAt": "2026-11-04T17:40:06.190Z",
+  "scope": "Small synthetic live Meta-model integration evaluation; not merchant validation or a statistical accuracy estimate",
+  "provider": "meta",
+  "samples": 6,
+  "passed": 6,
+  "results": [
+    {
+      "id": "quantity",
+      "orderId": "ORD-1043",
+      "text": "Send 24 units. Deliver on 2026-11-06.",
+      "expected": "AWAITING_CUSTOMER_ACCEPTANCE",
+      "quantity": 24,
+      "actual": "AWAITING_CUSTOMER_ACCEPTANCE",
+      "passed": true,
+      "orderUnchanged": true,
+      "intent": {
+        "kind": "amend",
+        "quantity": 24,
+        "delivery": "2026-11-06",
+        "requestedPrice": null,
+        "evidence": [
+          "24 units",
+          "2026-11-06"
+        ],
+        "ambiguities": [],
+        "summary": "Request to amend to 24 units for delivery on 2026-11-06.",
+        "_meta": {
+          "provider": "meta",
+          "model": "muse-spark-1.3",
+          "responseId": "resp_6aeb6dcee719fad710624698",
+          "latencyMs": 10688,
+          "inputTokens": 232,
+          "outputTokens": 1025
+        }
+      },
+      "latencyMs": 10689
+    },
+    {
+      "id": "shortage",
+      "orderId": "ORD-1042",
+      "text": "Make that 30 units. Keep the agreed price.",
+      "expected": "AWAITING_CUSTOMER_ACCEPTANCE",
+      "quantity": 30,
+      "actual": "AWAITING_CUSTOMER_ACCEPTANCE",
+      "passed": true,
+      "orderUnchanged": true,
+      "intent": {
+        "kind": "amend",
+        "quantity": 30,
+        "delivery": null,
+        "requestedPrice": null,
+        "evidence": [
+          "30 units"
+        ],
+        "ambiguities": [],
+        "summary": "Customer requests quantity increased to 30 units, keeping existing price.",
+        "_meta": {
+          "provider": "meta",
+          "model": "muse-spark-1.3",
+          "responseId": "resp_6aeb6dd20d974662aa66408b",
+          "latencyMs": 14955,
+          "inputTokens": 228,
+          "outputTokens": 1479
+        }
+      },
+      "latencyMs": 14955
+    },
+    {
+      "id": "discount",
+      "orderId": "ORD-1044",
+      "text": "Send 16 units at price 160.",
+      "expected": "AWAITING_CUSTOMER_ACCEPTANCE",
+      "quantity": 16,
+      "actual": "AWAITING_CUSTOMER_ACCEPTANCE",
+      "passed": true,
+      "orderUnchanged": true,
+      "intent": {
+        "kind": "amend",
+        "quantity": 16,
+        "delivery": null,
+        "requestedPrice": 160,
+        "evidence": [
+          "16 units",
+          "price 160"
+        ],
+        "ambiguities": [],
+        "summary": "Amend to 16 units at price 160.",
+        "_meta": {
+          "provider": "meta",
+          "model": "muse-spark-1.3",
+          "responseId": "resp_6aeb6de0375f59caa7d84ab1",
+          "latencyMs": 13504,
+          "inputTokens": 226,
+          "outputTokens": 1297
+        }
+      },
+      "latencyMs": 13504
+    },
+    {
+      "id": "boxes",
+      "orderId": "ORD-1043",
+      "text": "Send three boxes, same rate, Friday.",
+      "expected": "NEEDS_CLARIFICATION",
+      "actual": "NEEDS_CLARIFICATION",
+      "passed": true,
+      "orderUnchanged": true,
+      "intent": {
+        "kind": "amend",
+        "quantity": null,
+        "delivery": null,
+        "requestedPrice": null,
+        "evidence": [
+          "three boxes",
+          "Friday"
+        ],
+        "ambiguities": [
+          "How many individual units are in 'three boxes'?",
+          "What explicit YYYY-MM-DD date is meant by 'Friday'?",
+          "What exact price in INR is meant by 'same rate'?"
+        ],
+        "summary": "Requested three boxes for Friday at same rate; units, explicit date, and price need clarification.",
+        "_meta": {
+          "provider": "meta",
+          "model": "muse-spark-1.3",
+          "responseId": "resp_6aeb6de7dff6666f7ef74799",
+          "latencyMs": 20648,
+          "inputTokens": 226,
+          "outputTokens": 2083
+        }
+      },
+      "latencyMs": 20648
+    },
+    {
+      "id": "relative-date",
+      "orderId": "ORD-1043",
+      "text": "Send 24 units tomorrow.",
+      "expected": "NEEDS_CLARIFICATION",
+      "actual": "NEEDS_CLARIFICATION",
+      "passed": true,
+      "orderUnchanged": true,
+      "intent": {
+        "kind": "amend",
+        "quantity": 24,
+        "delivery": null,
+        "requestedPrice": null,
+        "evidence": [
+          "24 units"
+        ],
+        "ambiguities": [
+          "What explicit YYYY-MM-DD delivery date is meant by 'tomorrow'?"
+        ],
+        "summary": "Request to amend quantity to 24 units with unclear delivery date.",
+        "_meta": {
+          "provider": "meta",
+          "model": "muse-spark-1.3",
+          "responseId": "resp_6aeb6df3ea8e0e09df724503",
+          "latencyMs": 12207,
+          "inputTokens": 223,
+          "outputTokens": 1159
+        }
+      },
+      "latencyMs": 12207
+    },
+    {
+      "id": "cancellation",
+      "orderId": "ORD-1043",
+      "text": "Cancel my order.",
+      "expected": "AWAITING_CUSTOMER_ACCEPTANCE",
+      "actual": "AWAITING_CUSTOMER_ACCEPTANCE",
+      "passed": true,
+      "orderUnchanged": true,
+      "intent": {
+        "kind": "cancel",
+        "quantity": null,
+        "delivery": null,
+        "requestedPrice": null,
+        "evidence": [
+          "Cancel my order."
+        ],
+        "ambiguities": [],
+        "summary": "Customer requests cancellation of the order.",
+        "_meta": {
+          "provider": "meta",
+          "model": "muse-spark-1.3",
+          "responseId": "resp_6aeb6df602b140e36ef94f9a",
+          "latencyMs": 14507,
+          "inputTokens": 221,
+          "outputTokens": 1329
+        }
+      },
+      "latencyMs": 14507
+    }
+  ]
+}

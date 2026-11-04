@@ -49,7 +49,7 @@ Set environment variables in the server process, or configure them through Sites
 
 For the hackathon, the participant guide specifically names `meta-models/muse-spark-open-1026` for Baseten; verify availability for your account. Fireworks deployments need their own confirmed model identifier. Keys and model IDs are never interchangeable between providers. All destinations are fixed in server code; no arbitrary inference URL is accepted.
 
-Missing configuration and provider errors fail explicitly. Input and returned exact quotations are validated before planning. The interpreter records provider, model, response identifier, token counts when supplied, and latency with the analysis turn. These are audit metadata, not proof of model correctness. No production live-model evaluation has been recorded yet.
+Missing configuration and provider errors fail explicitly. Input and returned exact quotations are validated before planning. The interpreter records provider, model, response identifier, token counts when supplied, and latency with the analysis turn. These are audit metadata, not proof of model correctness. A six-scenario synthetic live evaluation passed with real Muse Spark calls. See docs/live-evaluation.json and docs/live-smoke.json. This small set is not statistical evidence of production accuracy. The owner’s $150 free-credit grant was confirmed; calls succeeded without adding a payment method.
 
 ## Architecture
 
