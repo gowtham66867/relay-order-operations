@@ -1,6 +1,6 @@
 {
   "scope": "Deterministic demo-parser and policy evaluation; NOT a live-model accuracy benchmark",
-  "generatedAt": "2026-11-04T16:40:32.151Z",
+  "generatedAt": "2026-11-04T16:41:30.273Z",
   "samples": 20,
   "passed": 20,
   "liveModelEvaluated": false,
