@@ -1,0 +1,169 @@
+{
+  "scope": "Deterministic demo-parser and policy evaluation; NOT a live-model accuracy benchmark",
+  "generatedAt": "2026-11-04T16:40:32.151Z",
+  "samples": 20,
+  "passed": 20,
+  "liveModelEvaluated": false,
+  "results": [
+    {
+      "id": "amend-24",
+      "expected": "AWAITING_CUSTOMER_ACCEPTANCE",
+      "actual": "AWAITING_CUSTOMER_ACCEPTANCE",
+      "quantityCorrect": true,
+      "blockedPrematureExecution": true,
+      "passed": true
+    },
+    {
+      "id": "amend-30",
+      "expected": "AWAITING_CUSTOMER_ACCEPTANCE",
+      "actual": "AWAITING_CUSTOMER_ACCEPTANCE",
+      "quantityCorrect": true,
+      "blockedPrematureExecution": true,
+      "passed": true
+    },
+    {
+      "id": "amend-12",
+      "expected": "AWAITING_CUSTOMER_ACCEPTANCE",
+      "actual": "AWAITING_CUSTOMER_ACCEPTANCE",
+      "quantityCorrect": true,
+      "blockedPrematureExecution": true,
+      "passed": true
+    },
+    {
+      "id": "amend-date",
+      "expected": "AWAITING_CUSTOMER_ACCEPTANCE",
+      "actual": "AWAITING_CUSTOMER_ACCEPTANCE",
+      "quantityCorrect": true,
+      "blockedPrematureExecution": true,
+      "passed": true
+    },
+    {
+      "id": "price",
+      "expected": "AWAITING_CUSTOMER_ACCEPTANCE",
+      "actual": "AWAITING_CUSTOMER_ACCEPTANCE",
+      "quantityCorrect": true,
+      "blockedPrematureExecution": true,
+      "passed": true
+    },
+    {
+      "id": "box",
+      "expected": "NEEDS_CLARIFICATION",
+      "actual": "NEEDS_CLARIFICATION",
+      "quantityCorrect": true,
+      "blockedPrematureExecution": true,
+      "passed": true
+    },
+    {
+      "id": "box-word",
+      "expected": "NEEDS_CLARIFICATION",
+      "actual": "NEEDS_CLARIFICATION",
+      "quantityCorrect": true,
+      "blockedPrematureExecution": true,
+      "passed": true
+    },
+    {
+      "id": "pack",
+      "expected": "NEEDS_CLARIFICATION",
+      "actual": "NEEDS_CLARIFICATION",
+      "quantityCorrect": true,
+      "blockedPrematureExecution": true,
+      "passed": true
+    },
+    {
+      "id": "carton",
+      "expected": "NEEDS_CLARIFICATION",
+      "actual": "NEEDS_CLARIFICATION",
+      "quantityCorrect": true,
+      "blockedPrematureExecution": true,
+      "passed": true
+    },
+    {
+      "id": "relative-date",
+      "expected": "NEEDS_CLARIFICATION",
+      "actual": "NEEDS_CLARIFICATION",
+      "quantityCorrect": true,
+      "blockedPrematureExecution": true,
+      "passed": true
+    },
+    {
+      "id": "weekday",
+      "expected": "NEEDS_CLARIFICATION",
+      "actual": "NEEDS_CLARIFICATION",
+      "quantityCorrect": true,
+      "blockedPrematureExecution": true,
+      "passed": true
+    },
+    {
+      "id": "uncertain",
+      "expected": "NEEDS_CLARIFICATION",
+      "actual": "NEEDS_CLARIFICATION",
+      "quantityCorrect": true,
+      "blockedPrematureExecution": true,
+      "passed": true
+    },
+    {
+      "id": "unknown",
+      "expected": "NEEDS_CLARIFICATION",
+      "actual": "NEEDS_CLARIFICATION",
+      "quantityCorrect": true,
+      "blockedPrematureExecution": true,
+      "passed": true
+    },
+    {
+      "id": "injection",
+      "expected": "NEEDS_CLARIFICATION",
+      "actual": "NEEDS_CLARIFICATION",
+      "quantityCorrect": true,
+      "blockedPrematureExecution": true,
+      "passed": true
+    },
+    {
+      "id": "cancel",
+      "expected": "AWAITING_CUSTOMER_ACCEPTANCE",
+      "actual": "AWAITING_CUSTOMER_ACCEPTANCE",
+      "quantityCorrect": true,
+      "blockedPrematureExecution": true,
+      "passed": true
+    },
+    {
+      "id": "invalid-quantity",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "quantityCorrect": true,
+      "blockedPrematureExecution": true,
+      "passed": true
+    },
+    {
+      "id": "zero",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "quantityCorrect": true,
+      "blockedPrematureExecution": true,
+      "passed": true
+    },
+    {
+      "id": "invalid-date",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "quantityCorrect": true,
+      "blockedPrematureExecution": true,
+      "passed": true
+    },
+    {
+      "id": "invalid-month",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "quantityCorrect": true,
+      "blockedPrematureExecution": true,
+      "passed": true
+    },
+    {
+      "id": "padded-quantity",
+      "expected": "AWAITING_CUSTOMER_ACCEPTANCE",
+      "actual": "AWAITING_CUSTOMER_ACCEPTANCE",
+      "quantityCorrect": true,
+      "blockedPrematureExecution": true,
+      "passed": true
+    }
+  ]
+}
