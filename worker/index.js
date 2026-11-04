@@ -15,7 +15,7 @@ export default {async fetch(request,env) {
     if(!url.pathname.startsWith('/api/')) return json({error:'Not found'},404);
     const user=request.headers.get('oai-authenticated-user-id') || (env.LOCAL_DEV==='1'?'local-operator':null);
     requireThat(user,'Sign in to access this workspace.',401);
-    requireThat(env.DB,'Database is not connected',503);
+    requireThat(env.DB || env.WORKSPACE_STORE,'Database is not connected',503);
     if(request.method!=='GET') {
       requireThat(request.method==='POST','Method not allowed',405);
       const origin=request.headers.get('origin');
@@ -25,7 +25,7 @@ export default {async fetch(request,env) {
       requireThat(raw.length<=20000,'Request too large',413);
       let input; try{input=JSON.parse(raw);}catch{throw new Problem(400,'Invalid JSON');}
       requireThat(input&&typeof input==='object'&&!Array.isArray(input),'JSON object required');
-      const store=new WorkspaceStore(env.DB);
+      const store=env.WORKSPACE_STORE || new WorkspaceStore(env.DB);
       const {state,version}=await store.load(user);
       let result={};
       if(url.pathname==='/api/messages') {
@@ -76,7 +76,7 @@ export default {async fetch(request,env) {
       await store.save(user,version,state);
       return json(result);
     }
-    const {state,version}=await new WorkspaceStore(env.DB).load(user);
+    const {state,version}=await (env.WORKSPACE_STORE || new WorkspaceStore(env.DB)).load(user);
     if(url.pathname==='/api/workspace') return json({...state,version,metaConfigured:inferenceConfig(env).configured,model:inferenceConfig(env).model,provider:inferenceConfig(env).provider,catalog:state.catalog.map(p=>({...p,available:available(state,p.sku)})),cases:state.cases.map(c=>({...c,workflow:workflowOf(c),proposalVersion:c.proposalVersion||1,drafts:Object.fromEntries(c.plan.choices.map(choice=>[choice.id,customerDraft(state,c,choice.id)]))}))});
     if(url.pathname==='/api/export') return json({exportedAt:new Date().toISOString(),...state});
     return json({error:'Not found'},404);

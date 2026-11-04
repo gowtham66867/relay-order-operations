@@ -1,0 +1,77 @@
+{
+  "checkedAt": "2026-11-04T17:55:24Z",
+  "url": "https://relay-order-operations-mb3wwhqg6q-el.a.run.app",
+  "project": "billing-dashboard-505116",
+  "region": "asia-south1",
+  "checks": [
+    {
+      "check": "Authenticated Firestore workspace",
+      "passed": true
+    },
+    {
+      "check": "Live Meta analysis",
+      "passed": true
+    },
+    {
+      "check": "Proposal has shortage",
+      "passed": true
+    },
+    {
+      "check": "Acceptance persisted",
+      "passed": true
+    },
+    {
+      "check": "Acceptance alone does not allocate",
+      "passed": true
+    },
+    {
+      "check": "Approved atomic execution",
+      "passed": true
+    },
+    {
+      "check": "Ledger verifies 18/30 allocated",
+      "passed": true
+    },
+    {
+      "check": "Duplicate replay blocked",
+      "passed": true
+    },
+    {
+      "check": "Reload persists without duplicate write",
+      "passed": true
+    },
+    {
+      "check": "Anonymous requests denied",
+      "passed": true
+    },
+    {
+      "check": "Cross-origin mutation denied",
+      "passed": true
+    }
+  ],
+  "caseId": "48c3eef5-1387-4993-aeb6-e7956489f303",
+  "execution": {
+    "id": "51519490-ff02-4537-9c18-e82cd2b089c1",
+    "idempotencyKey": "48c3eef5-1387-4993-aeb6-e7956489f303:v1",
+    "adapter": "local-ledger",
+    "startedAt": "2026-11-04T17:55:23.021Z",
+    "actor": "cloud-run-owner",
+    "status": "VERIFIED",
+    "verifiedAt": "2026-11-04T17:55:23.021Z",
+    "orderVersion": 1
+  },
+  "modelEvidence": [
+    {
+      "at": "2026-11-04T17:55:22.132Z",
+      "text": "Send 30 units at price 150. Deliver on 2026-11-06.",
+      "questions": [],
+      "mode": "meta",
+      "provider": "meta",
+      "model": "muse-spark-1.3",
+      "responseId": "resp_6aeb718926ab4e95af0a4913",
+      "latencyMs": 6719,
+      "inputTokens": 236,
+      "outputTokens": 903
+    }
+  ]
+}

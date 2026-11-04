@@ -128,6 +128,6 @@ The upgraded JSON state is additive; no existing database migration is rewritten
 
 `node scripts/export-public.mjs` creates a sanitized source checkout under ignored `.local/public-source`, removing the owner-specific Site ID and custom-domain setup details. It never copies local databases, environment files, credentials, or build output.
 
-Hackathon submission still requires a public open-source GitHub repository, an accessible three-minute video, and real Meta-model use. A fixture or mocked provider response is not sufficient evidence of Meta inference. See `docs/demo.md` and `docs/submission-readiness.md` for current gaps. Do not claim merchant savings until a pilot measures them.
+Relay has been submitted to the Meta Global AI Developer Hackathon. [Watch the three-minute demo](https://github.com/gowtham66867/relay-order-operations/releases/tag/demo-v1). See `docs/submission-readiness.md` for the submission record and actual live Meta evaluation evidence, and `docs/cloud-run.md` for the private Cloud Run deployment. Merchant savings require pilot measurement.
 
 References: [Meta quickstart](https://dev.meta.ai/docs/quickstart), [participant guide](https://cerebralvalley.ai/e/meta-ai-developer-hackathon/details), [Baseten API](https://docs.baseten.co/reference/inference-api/chat-completions), [Fireworks API](https://docs.fireworks.ai/api-reference/post-chatcompletions), [Meta webhook sample](https://github.com/fbsamples/whatsapp-api-examples/tree/main/signature-validation-with-webhooks-payloads).

@@ -1,26 +1,23 @@
-# Submission readiness
+# Submission record
 
-Status: **NOT READY TO SUBMIT** until the external evidence below is complete.
+Relay was submitted to the Meta Global AI Developer Hackathon on November 4, 2026.
 
-## Implemented and locally testable
+- Entry ID: `a35eaa1b-c8d0-4558-90b2-f1ec508a0123`
+- Track: Indie Developer / Build for Your World
+- Submission: https://cerebralvalley.ai/e/meta-ai-developer-hackathon/hackathon/a35eaa1b-c8d0-4558-90b2-f1ec508a0123/edit
+- Public MIT source: https://github.com/gowtham66867/relay-order-operations
+- Public three-minute video: https://github.com/gowtham66867/relay-order-operations/releases/download/demo-v1/relay-demo.mp4
 
-- Persistent intake, clarification, versioned proposals, separate customer acceptance and operator approval.
-- Stock and pricing checks, supersession, cancellation, duplicate protection, concurrency checks.
-- Explicit Meta/Baseten/Fireworks inference adapters with fixed destinations and no silent fallback.
-- A verified WhatsApp adapter library using synthetic signed payloads; live ingress is not enabled.
-- Automated tests and a deterministic evaluation report. These do not establish live model accuracy.
+The portal returned a “View Submission” link and the saved “Your Submission” page. The user explicitly approved the materials promotion permission and the required opinion answers. The video is an edited screen walkthrough with synthetic narration, synthetic business data, and actual Meta inference.
 
-## Required evidence still missing
+## Evidence
 
-1. **Complete:** a dedicated Meta key is stored as a hosted secret. Muse Spark 1.3 returned real responses; see `live-smoke.json`. Free credits were confirmed and inference succeeded without adding a payment method.
-2. **Complete, limited scope:** six synthetic live-model scenarios passed; see `live-evaluation.json`. This is an integration evaluation, not a production accuracy estimate.
-3. Record and publish an accessible three-minute video. A script is available; a video URL is not.
-4. Public source created: https://github.com/gowtham66867/relay-order-operations (MIT license). Verify final checks after publication.
-5. Confirm judges can access the demo. The app is intentionally owner-private; do not assume a private URL gives judges access.
-6. Review the complete submission form and enter accurate team/project details. No submission has been sent.
+- 35 automated tests and 20 deterministic scenario evaluations passed.
+- Six synthetic live-model scenarios passed; see `live-evaluation.json`. These are integration checks, not a production accuracy estimate.
+- Actual Meta response metadata is visible in the app and public reports. Free credits were confirmed; calls succeeded without adding a payment method.
+- Cloud Run deployment uses Firestore transactions and Google Secret Manager. Eleven hosted workflow/access checks passed; see `cloud-run-verification.json`.
+- Operational hosted workspaces remain private. Judges can review the public video and runnable source without access to a paid inference secret.
 
-## Production and pilot scope
+## Scope
 
-Real WhatsApp receipt/reply, voice transcription, ERP updates, ERP timeout reconciliation, shared merchant tenancy, production roles, and measured merchant impact remain external-integration/pilot work. They are not completed capabilities of this release.
-
-Custom domain verification is optional for the hackathon and is separate from model integration. Do not delay required evidence to polish DNS branding.
+Real WhatsApp receipt/reply, voice transcription, ERP updates, ERP timeout reconciliation, shared merchant tenancy, production roles, and measured merchant impact remain future integration and pilot work. No real customer message or production ERP mutation occurs in this prototype.
